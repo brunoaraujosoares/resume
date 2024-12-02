@@ -1,0 +1,282 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.photo {
+    text-align: center;
+}
+.photo img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.personal-info, .contacts, .skills, .education, .projects {
+    margin-top: 20px;
+}
+h2 {
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #007BFF;
+    display: inline-block;
+}
+
+*/
+
+body{
+    font-family: "Lato", sans-serif;
+    background: #d7d7d7 ;
+    padding: 1em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1, h2, .subtitle{
+    font-family: "Oswald" , sans-serif;
+    letter-spacing: 3px;
+}
+
+
+h1, h2, .subtitle {
+    text-transform: uppercase;
+}
+
+
+h1 {
+    line-height: 1.2em;
+    font-size: 2em;
+}
+
+p {
+    line-height: 1.7em;
+}
+
+h2 {
+    display: inline-block;
+    margin-bottom: 0.8em;
+    position: relative;
+}
+
+h2:before {
+    content: "";
+    width: 20px;
+    height: 5px;
+    background-color: #ffc904;
+    position: absolute;
+    right: -1em;
+    bottom: 0.3em;
+
+}
+
+.resume{
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffc904;
+    padding-left: 10px;
+
+
+}
+
+.profile-img{
+    min-height: 35em;
+    position: relative;
+}
+
+.profile-img img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    background-color: #fff ;
+    color: #111;
+    padding: 2em;
+    display: flex;
+    align-items:end;
+}
+
+.title h1:first-child {
+    font-weight: 400;
+
+}
+
+.separator {
+    width: 4em;
+    height: 4px;
+    background-color: #ffc904;
+    margin: 2em 0;   
+}
+
+
+.subtitle {
+    color: 5b5b5b;
+}
+
+.details{
+    color: #f2f2f2;
+}
+
+.col-1{
+ background-color: #292935;
+}
+.col-2 {
+    background-color: #22222e;
+}
+
+.col-1 > div, .col-2 > div {
+    padding: 1.5em;
+}
+
+.about p:not(:last-child) {
+    margin-bottom: 1em ;
+}
+
+.contact-info > div:not(last-child),
+.experience  > div:not(last-child) {
+    margin-bottom: 2em;;
+}
+
+.hobbies  > div  {
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.hobby {
+    width: 3em;
+    height: 3em;
+    border: 2px solid #ffc904;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.education {
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.education p span , .experience p span {
+    padding: 0.2em 0.5em;
+    background-color: #ffc904;
+    color: #111;
+    border-radius: 5px;
+    margin-right: 0.5em;
+}
+
+.education p:nth-child(2), .experience p:nth-child(2)  {
+    margin-block: 0.7em;
+}
+
+p.text {
+    margin-bottom: 1em;
+}
+
+.education ul, .experience ul{
+    margin-left: 40px;
+}
+
+.education ul li , .experience ul li {
+    margin-bottom: 1em;
+}
+
+
+.expertise .circles {
+    padding: 1em 0.5em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 4em;
+}
+
+.circle {
+    background: #2d3239;
+    border: 1px #555 solid ;
+    border-radius: 50%;
+    position: relative;
+    width: 5.2em;
+    height: 5.2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle p {
+    font-size: 0.8em;
+    padding: 1.5em;
+    line-height: 1em;
+}
+
+.circle svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.track {
+    fill: none;
+}
+
+.progress {
+    fill: none;
+    stroke: #ffc904;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-dasharray: 630 ;
+    stroke-dashoffset: 630;
+    transition: 1s ease-in-out;
+
+}
+
+/* small screens */
+@media screen and (max-width: 900px) {
+    .education > div {
+        grid-template-columns: 1fr;
+    }
+}
+    
+/* larger screens */
+@media screen and (min-width: 900px) {
+    .resume {
+        padding-left: 3em;
+    }
+    h1 {font-size: 3.2em;}
+    h1 {font-size: 1.8em;}
+    .subtitle {font-size: 1.7em;}
+    .hero {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+    }
+    .details {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+    }
+}

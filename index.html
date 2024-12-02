@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Araujo's Resume</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+    <main class="resume">
+        <section class="hero">
+            <div class="profile-img">
+                <img src="profile.jpg" alt="A selfie of mine, walking home in a sunny day dressing a black Sabaton T-shirt">
+                
+            </div>
+            <div class="title">
+                <div>
+                    <h1>Bruno</h1>
+                    <h1>Araújo Soares</h1>
+                    <div class="separator"></div>
+                    <p class="subtitle">
+                        Software Engineer - UX | UI | Accessibility Specialist
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="details">
+            <div class="col-1">
+                <div class="about">
+                    <h2>About Me</h2>
+                    <p>
+                        I am a multidisciplinary professional with a degree in Advertising,
+                        a postgraduate degree in Data Analysis, and I am currently pursuing 
+                        a degree in Software Engineering. </p>
+                    <p>                        
+                        With over 10 years of experience in web projects, I focus on creating
+                        digital solutions that combine stunning user interfaces (UI), usability, user 
+                        experience (UX), and accessibility.
+                    </p>
+                    <p>
+                        My journey blends the creativity and understanding of human behavior
+                        from advertising, the analytical rigor of data analysis, and the
+                        technical depth of software engineering. This combination enables me
+                        to develop products that are not only functional but also intuitive
+                        and inclusive, meeting the needs of diverse users.
+                    </p>
+                    <p>
+                        I am passionate about transforming ideas into memorable digital
+                        experiences, always striving to align technological innovation with
+                        accessible, user-centered practices.
+                    </p>
+                </div>
+                <div class="personal-info">
+                    <h2>Personal Info</h2>
+                    <h3>Location</h3>
+                    <p> Salvador, Bahia, Brazil (or worldwide) </p>
+                    <h3>Birth Date</h3>
+                    <p>March 9th 1979</p>
+                </div>
+
+                <div class="contact-info">
+                    <h2>Contact Info</h2>
+                    <div>
+                        <h3>E-mail</h3>
+                        <p id="email-container"></p>
+                        <h3>Phone</h3>
+                        <p id="phone-container"></p>
+
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const emailHash = "6272756e6f617261756a6f736f6172657340676d61696c2e636f6d";
+                                const whatsappHash = "37312039393932342033303130";
+                      
+                                function hexToText(hex) {
+                                    return hex.match(/.{1,2}/g).map(byte => String.fromCharCode(parseInt(byte, 16))).join('');
+                                }
+                      
+                                const email = hexToText(emailHash);
+                                const whatsapp = hexToText(whatsappHash);
+                      
+                                
+                                const phoneContainer = document.getElementById("phone-container") ;
+                                const emailContainer = document.getElementById("email-container") ;
+                                phoneContainer.innerHTML = `+55 ${whatsapp}`;
+                                emailContainer.innerHTML = `${email}`;
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="hobbies">
+                    <h2>Hobbies</h2>
+                    <div>
+                        <div class="hobby">
+                            <span class="material-symbols-outlined">
+                                music_note
+                            </span>
+                        </div>
+                        <div class="hobby">
+                            <span class="material-symbols-outlined">
+                                directions_run
+                            </span>
+                        </div>
+                        <div class="hobby">
+                            <span class="material-symbols-outlined">
+                                stadia_controller
+                            </span>
+                        </div>
+                        <div class="hobby">
+                            <span class="material-symbols-outlined">
+                                code
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-2">
+                
+                <div class="education">
+                    <h2>Education</h2>
+                    <div>
+                        <div>
+                            <h3>Bachelor's Degree in Software Engineering</h3>
+                            <p><span>2023-2027</span> Anhanguera University </p>
+                        </div>
+                        <div>
+                            <h3>Postgraduate Degree in Data Analysis</h3>
+                            <p><span>2021-2022</span> Descomplica</p>
+                        </div>
+                        <div>
+                            <h3>Specialization in Video Production and Animation</h3>
+                            <p><span>January to June 2004</span>DRC Consulting</p>
+                        </div>
+                        <div>
+                            <h3>Bachelor's Degree in Social Communication with a Specialization in Advertising</h3>
+                            <p><span>1999-2023</span>Polifucs</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="experience">
+                    <h2>Experience</h2>
+                    <div>
+                        <h3>Internal Information Coordiator</h3>
+                        <p><span>2023 - present</span> Anatel - National Telecommunications Agency</p>    
+                    </div>
+                    <div>
+                        <h3>Regulatory Technician</h3>
+                        <p><span>2007 - present</span> Anatel - National Telecommunications Agency</p>
+                    
+                        <p class="text">
+                            Anatel regulates and supervises telecommunications services in Brazil, ensuring
+                            quality, universal access, and fair competition. It is equivalent to Anacom in
+                            Portugal, the FCC in the United States, and Ofcom in the United Kingdom.
+                        </p>
+
+                        <p class="text">
+                            I started working at Anatel's São Paulo office. In February 2012, I requested a
+                            transfer to Goiânia's office. In december 2023, I was offered to Coordinate 
+                            Internal Information (ITCs) at Bahia's Office, where I currently live.
+                        </p>
+                        <p class="text">As ITCs Coordiator I lead a team of five people. The tasks I manage are:
+                            <ul>
+                                <li>document handling service;</li>
+                                <li>Scheduling and management of events in an auditorium with a capacity 
+                                    of 50 people, a meeting room with a capacity of 15 people, and a
+                                    training room with a capacity of 12 people, as well as allocating and
+                                    adapting spaces for various events.</li>
+                                <li>lending equipment to employees, coordinating equipment maintenance, 
+                                    monitoring service requests in the internal help desk system, among other
+                                    tasks.</li>
+                            </ul>
+                        </p>
+                        <p class="text"> The activities I have carried out at Anatel are almost countless: drafting
+                            official letters and requests; analyzing responses; organizing storage for seized
+                            materials and, when authorized, destroying these materials; inspecting unauthorized
+                            radio stations and internet providers, leading to the cessation of their services;
+                            verifying the compliance of contributions to the Universal Telecommunications 
+                            Services Fund (FUST) by authorized providers; registering user complaints;
+                            conducting inspections related to Universal Telecommunications Services,
+                            Broadband in Public Schools, Backhaul, Legal Mobile Devices Brazilian Program
+                            (CEMI); auditing internet quality measurements, compliance with the mobile
+                            service user registration database, inventory management, asset disposal;
+                            and protocol services.
+                        </p> 
+                        <p class="text">
+                            Recently, I was part of the team responsible for Accessibility Ranking's inspections. 
+                            My task was to test the interaction mechanisms offered by service providers to users
+                            with disabilities. Although I have since been reassigned to other activities, I still
+                            contribute to updating the Accessibility Ranking Inspection Procedure.
+                        </p>
+                        <p class="text">
+                            I was also been involved in activities related to Big Data using Python,
+                            analyzing datasets with tens of millions of records in various inspections.
+                        </p>
+
+                    </div>
+                    <div>
+                        <h3>Interface Engineer</h3>
+                        <p><span>october, 2006 - may 2007</span> Power.com | RJ</p>
+                        <p>Power.com was a project at a startup in Rio de Janeiro that consisted in a social
+                            network hub (initially called PowerScrap). The portal integrated platforms like 
+                            Orkut, Flogão, and YouTube, adding features that the sites it aggregated only 
+                            implemented much later.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Web Designer</h3>
+                        
+                        <p><span>February to October 2005</span> NetDom | BA</p>
+                        <p>
+                            NeDom was responsible for publishing Local Govenrment Official Documents. There, I 
+                            helped build a new portal, much lighter than the existing one. I also participated
+                            in the project that led to the creation of the National Official Press' portal of
+                            Cape Verde.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Advisory</h3>
+                        <p><span>2005</span> City Council of Lauro de Freitas | BA</p>
+                        <p>I participated in the advisory team of a city councilwoman from my hometown, with the
+                            following responsibilities:</p>
+                            <ul>
+                                <li>
+                                    creating and maintaining a website to publicize the actions of the mandate;
+                                </li>
+                                <li>
+                                    creating printed materials, such as pamphlets and booklets;
+                                </li>
+                                <li>
+                                    editing videos;
+                                </li>
+                                <li>
+                                    attending meetings in community associations; among others.
+                                </li>
+                            </ul> 
+                        <p>
+                            The mandate's website featured a content management system that could be updated by
+                            multiple users with specific access profiles. Starting from the second version, I
+                            incorporated SEO techniques to the website. By January 2006, the site had over 7,000 
+                            visits per month; it ranked first on Google for the search term “mandato participativo” 
+                            and had a good overall position on search engines. In December 2005, I stepped away
+                            from the routine activities of the Mandate, remaining in charge only of maintaining
+                            the website.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Web Designer</h3>
+                        <p><span>2002-2003</span> Interativa Internet - Salvador | BA</p>
+                        <p>
+                            I used to develop system interfaces with web-based designs. Visual planning was done
+                            in Photoshop. There, I learned PHP, databases (PostgreSQL, Oracle, and MySQL),
+                            strengthened my JavaScript skills, and gained some knowledge about networks. I also
+                            learned how to separate code into layers. I stayed with the company for almost two
+                            years, and even after leaving, I continued providing services as a freelancer.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="expertise">
+                    <h2>Expertise</h2>
+
+                    <div class="circles">
+
+
+                        <div class="circle" data-prog="90">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress">
+
+                                </circle>
+                            </svg>
+                            <p>Html</p>
+                        </div>
+
+                        <div class="circle" data-prog="80">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress">
+
+                                </circle>
+                            </svg>
+                            <p>CSS</p>
+                        </div>
+
+                        <div class="circle" data-prog="35">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress">
+
+                                </circle>
+                            </svg>
+                            <p>JavaScript</p>
+                        </div>
+
+
+                        <div class="circle" data-prog="60">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress"></circle>
+                            </svg>
+                            <p>Photoshop</p>
+                        </div>
+
+
+                        <div class="circle" data-prog="75">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress"></circle>
+                            </svg>
+                            <p>Illustrator</p>
+                        </div>
+
+                        <div class="circle" data-prog="75">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress">
+
+                                </circle>
+                            </svg>
+                            <p>inkscape</p>
+                        </div>
+
+
+                        <div class="circle" data-prog="85">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress">
+
+                                </circle>
+                            </svg>
+                            <p>Word</p>
+                        </div>
+
+                        <div class="circle" data-prog="70">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress">
+
+                                </circle>
+                            </svg>
+                            <p>Excel</p>
+                        </div>
+
+                        <div class="circle" data-prog="90">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress">
+
+                                </circle>
+                            </svg>
+                            <p>PowerPoint</p>
+                        </div>
+
+
+                        <div class="circle" data-prog="35">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress">
+
+                                </circle>
+                            </svg>
+                            <p>Power BI</p>
+                        </div>
+
+                        <div class="circle" data-prog="60">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress">
+
+                                </circle>
+                            </svg>
+                            <p>PHP</p>
+                        </div>
+
+                        <div class="circle" data-prog="50">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress">
+
+                                </circle>
+                            </svg>
+                            <p>Python</p>
+                        </div>
+
+
+                        <div class="circle" data-prog="50">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress">
+
+                                </circle>
+                            </svg>
+                            <p>GIT</p>
+                        </div>
+
+                        <div class="circle" data-prog="75">
+                            <svg width="150" height="150">
+                                <circle r="50" cx="75" cy="75" class="progress">
+
+                                </circle>
+                            </svg>
+                            <p>SQL</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
