@@ -46,6 +46,9 @@ body{
     box-sizing: border-box;
 }
 
+a {
+    color: #cccccc;
+}
 
 h1, h2, .subtitle{
     font-family: "Oswald" , sans-serif;
