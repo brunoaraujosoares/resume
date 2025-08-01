@@ -1,430 +1,345 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruno Araujo's Resume</title>
-    <link rel="stylesheet" href="css.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume - Bruno Ara&aacute;jo Soares</title>
+  <style>
+    body {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 1rem;
+      margin: 0;
+      padding: 1rem;
+      background-color: #000000;
+      color: #333;
+    }
+
+    .container {  
+      max-width: 800px;
+      margin: auto;
+      background-color: #deded4;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #092b72;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      padding: 10px;
+      color: #092b72;
+      
+    }
+
+    h2 {
+      text-transform: uppercase;
+      padding: 8px 15px;
+      background-color: #092b72;
+      color: rgb(119, 211, 250);
+    }
+    h3 {
+      text-transform: uppercase;
+      padding: 0px;
+      margin: 0px;
+      margin-bottom: 5px;
+      color: rgb(32, 142, 189);
+    }
+    #experiencias span {
+      background-color: rgb(32, 142, 189);;
+      color: #deded4;
+      padding: 6px;
+      font-size: 0.7rem;
+
+    }
+
+    .section {
+      margin-bottom: 1.5rem;
+    }
+    
+    #resumo, #experiencias, #competencias, #competencias-soft{
+      margin: 10px 40px 40px 40px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 0.5rem;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      .profile img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <main class="resume">
-        <section class="hero">
-            <div class="profile-img">
-                <img src="profile.jpg" alt="A selfie of mine, walking home in a sunny day dressing a black Sabaton T-shirt">
-                
-            </div>
-            <div class="title">
-                <div>
-                    <h1>Bruno</h1>
-                    <h1>Araújo Soares</h1>
-                    <div class="separator"></div>
-                    <p class="subtitle">
-                        Software Engineer <br>
-                        UX | UI | Accessibility Specialist
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="details">
-            <div class="col-1">
-                <div class="about">
-                    <h2>About Me</h2>
-                    <p>
-                        I am a multidisciplinary professional with a degree in Advertising,
-                        a postgraduate degree in Data Analysis, and I am currently pursuing 
-                        a degree in Software Engineering. </p>
-                    <p>                        
-                        With over 10 years of experience in web projects, I focus on creating
-                        digital solutions that combine stunning user interfaces (UI), usability, user 
-                        experience (UX), and accessibility.
-                    </p>
-                    <p>
-                        My journey blends the creativity and understanding of human behavior
-                        from advertising, the analytical rigor of data analysis, and the
-                        technical depth of software engineering. This combination enables me
-                        to develop products that are not only functional but also intuitive
-                        and inclusive, meeting the needs of diverse users.
-                    </p>
-                    <p>
-                        I am passionate about transforming ideas into memorable digital
-                        experiences, always striving to align technological innovation with
-                        accessible, user-centered practices.
-                    </p>
-                </div>
-                <div class="personal-info">
-                    <h2>Personal Info</h2>
-                    <h3>Location</h3>
-                    <p> Salvador, Bahia, Brazil (or worldwide) </p>
-                    <h3>Birth Date</h3>
-                    <p>March 9th 1979</p>
-                </div>
+  <div class="container">
+    <div class="profile"> 
+      <img src="eu-linkedin.jpg" alt="Bruno Ara&aacute;jo">
+      <h1>Bruno Araújo Soares</h1>
+      <p><span id="email-container"></span> | Current location: Bahia/Brazil | <span id="phone-container"></span><br>
+        Linkedin: <a href="https://www.linkedin.com/in/bruno-araujo-soares/" target="_blank">linkedin.com/in/bruno-araujo-soares/</a></p>
+    </div>
+<script>
 
-                <div class="contact-info">
-                    <h2>Contact Info</h2>
-                    <div>
-                        <h3>E-mail</h3>
-                        <p id="email-container"></p>
-                        <h3>Phone</h3>
-                        <p id="phone-container"></p>
-                        <h3>LinkedIn</h3>
-                        <p>
-                            <a href="https://www.linkedin.com/in/bruno-araujo-soares/" target="_blank">
-                                https://www.linkedin.com/in/bruno-araujo-soares/
-                            </a>
-                        </p>
+    document.addEventListener("DOMContentLoaded", function () {
+        const emailHash = "6272756e6f617261756a6f736f6172657340676d61696c2e636f6d";
+        const whatsappHash = "37312039393932342033303130";
 
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function () {
-                                const emailHash = "6272756e6f617261756a6f736f6172657340676d61696c2e636f6d";
-                                const whatsappHash = "37312039393932342033303130";
-                      
-                                function hexToText(hex) {
-                                    return hex.match(/.{1,2}/g).map(byte => String.fromCharCode(parseInt(byte, 16))).join('');
-                                }
-                      
-                                const email = hexToText(emailHash);
-                                const whatsapp = hexToText(whatsappHash);
-                      
-                                
-                                const phoneContainer = document.getElementById("phone-container") ;
-                                const emailContainer = document.getElementById("email-container") ;
-                                phoneContainer.innerHTML = `+55 ${whatsapp}`;
-                                emailContainer.innerHTML = `${email}`;
-                            });
-                        </script>
-                    </div>
-                </div>
+        function hexToText(hex) {
+            return hex.match(/.{1,2}/g).map(byte => String.fromCharCode(parseInt(byte, 16))).join('');
+        }
 
-                <div class="hobbies">
-                    <h2>Hobbies</h2>
-                    <div>
-                        <div class="hobby">
-                            <span class="material-symbols-outlined">
-                                music_note
-                            </span>
-                        </div>
-                        <div class="hobby">
-                            <span class="material-symbols-outlined">
-                                directions_run
-                            </span>
-                        </div>
-                        <div class="hobby">
-                            <span class="material-symbols-outlined">
-                                stadia_controller
-                            </span>
-                        </div>
-                        <div class="hobby">
-                            <span class="material-symbols-outlined">
-                                code
-                            </span>
-                        </div>
+        const email = hexToText(emailHash);
+        const whatsapp = hexToText(whatsappHash);
 
-                    </div>
-                </div>
+        
+        const phoneContainer = document.getElementById("phone-container") ;
+        const emailContainer = document.getElementById("email-container") ;
+        phoneContainer.innerHTML = `+55 ${whatsapp}`;
+        emailContainer.innerHTML = `${email}`;
+    });
+</script>
+    
+    <h2 id="titulo"></h2>
+    <div class="section" id="resumo"></div>
 
+    <h2>Education</h2>
+    <div class="section">
+      <ul>
+        <li><strong>Bachelor's degree in Software Engineering</strong> – Anhanguera Educacional (Jul 2023 – atual)</li>
+        <li><strong>MBA in Data Analysis </strong> – Descomplica (Nov 2021 – Mai 2022)</li>
+        <li><strong>Bachelor's degree in Advertising</strong> – Faculdade Metropolitana - POLIFUCS (1999 – 2003)</li>
+      </ul>
+    </div>
 
-            </div>
+    <h2>Experience</h2>
+    <div class="section" id="experiencias"></div>
 
-            <div class="col-2">
-                
-                <div class="education">
-                    <h2>Education</h2>
-                    <div>
-                        <div>
-                            <h3>Bachelor's Degree in Software Engineering</h3>
-                            <p><span>2023-2027</span> Anhanguera University </p>
-                        </div>
-                        <div>
-                            <h3>Postgraduate Degree in Data Analysis</h3>
-                            <p><span>2021-2022</span> Descomplica</p>
-                        </div>
-                        <div>
-                            <h3>Specialization in Video Production and Animation</h3>
-                            <p><span>January to June 2004</span>DRC Consulting</p>
-                        </div>
-                        <div>
-                            <h3>Bachelor's Degree in Social Communication with a Specialization in Advertising</h3>
-                            <p><span>1999-2023</span>Polifucs</p>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="experience">
-                    <h2>Experience</h2>
-                    <div>
-                        <h3>Internal Information Coordiator</h3>
-                        <p><span>2023 - 2025</span> Anatel - National Telecommunications Agency</p>    
-                    </div>
-                    <div>
-                        <h3>Regulatory Technician</h3>
-                        <p><span>2007 - present</span> Anatel - National Telecommunications Agency</p>
-                    
-                        <p class="text">
-                            Anatel regulates and supervises telecommunications services in Brazil, ensuring
-                            quality, universal access, and fair competition. It is equivalent to Anacom in
-                            Portugal, the FCC in the United States, and Ofcom in the United Kingdom.
-                        </p>
+    
+    <h2>Technical Skills</h2>
+    <div class="section" id="competencias">
+      <!-- Competências serão inseridas via JS -->
+    </div>
 
-                        <p class="text">
-                            I started working at Anatel's São Paulo office. In February 2012, I requested a
-                            transfer to Goiânia's office. In December 2023, I was offered to Coordinate 
-                            Internal Information (ITCs) at Bahia's Office. In May 2025 I decided to return
-                            to my regular activities in Goiânia's office.
-                        </p>
-                        <p class="text">As ITCs Coordiator I used to lead a team of five people. The tasks I manage were:
-                            <ul>
-                                <li>document handling service;</li>
-                                <li>Scheduling and management of events in an auditorium with a capacity 
-                                    of 50 people, a meeting room with a capacity of 15 people, and a
-                                    training room with a capacity of 12 people, as well as allocating and
-                                    adapting spaces for various events.</li>
-                                <li>lending equipment to employees, coordinating equipment maintenance, 
-                                    monitoring service requests in the internal help desk system, among other
-                                    tasks.</li>
-                            </ul>
-                        </p>
-                        <p class="text"> The activities I have carried out at Anatel since 2007 are almost countless:
-                            <ul>
-                                <li>I drafted official documents and analyzed responses;</li>
-                                <li>
-                                    I organized apprehended equipment, giving it the proper destination, when
-                                    authorized ;
-                                </li>
-                                <li>
-                                    I inspected illegal radio stations and internet providers, terminating their services
-                                    when harmful interference in the electromagnetic spectrum was identified.;
-                                </li>
-                                <li>I was responsible for inventory managing</li>
-                                <li>I verifyed the compliance of contributions to the Universal Telecommunications 
-                                    Services Fund (FUST) by authorized providers; </li>
-                                <li>I registered and treated telecom. user's complaints;</li>
-                                <li>I conducted or participated in inspections related to:
-                                    <ul>
-                                        <li>Universalization of telecommunications services,</li>
-                                        <li>Broadband in Public Schools,</li>
-                                        <li>Legal Mobile Devices Brazilian Program</li>
-                                        <li>auditing internet quality measurements,</li>
-                                        <li>auditing compliance with the mobile service user registration database,</li>
-                                    </ul>
-                                </li>
-                             <li>
-                                 Recently, I was part of the team responsible for Accessibility Ranking's inspections. 
-                                My task was to test the interaction mechanisms offered by telecom. service providers to users
-                                with disabilities. Although I have been reassigned to other activities, I still
-                                contribute to updating the Accessibility Ranking Inspection Procedure.
-                             </li>
-                            </ul>
-                        </p>
-                        <p class="text">
-                            I was also been involved in activities related to Big Data using Python,
-                            analyzing datasets with tens of millions of records.
-                        </p>
+    <h2>Soft Skills</h2>
+    <div class="section" id="competencias-soft">
+      <h3>Adaptability</h3>
+      <p>Ability to quickly adjust to new challenges, technologies, and work environments.</p>
 
-                    </div>
-                    <div>
-                        <h3>Interface Engineer</h3>
-                        <p><span>october, 2006 - may 2007</span> Power.com | RJ</p>
-                        <p>Power.com was a project at a startup in Rio de Janeiro that consisted in a social
-                            network hub (initially called PowerScrap). The portal integrated platforms like 
-                            Orkut, Flogão, and YouTube, adding features that the sites it aggregated only 
-                            implemented much later.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Web Designer</h3>
-                        <p><span>February to October 2006</span> NetDom | BA</p>
-                        <p>
-                            NeDom was responsible for publishing Local Govenrment Official Documents. There, I 
-                            helped build a new portal, much lighter than the existing one. I also participated
-                            in the project that led to the creation of the National Official Press' portal of
-                            Cape Verde.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Advisory</h3>
-                        <p><span>2005</span> City Council of Lauro de Freitas | BA</p>
-                        <p>I participated in the advisory team of a city councilwoman from my hometown, with the
-                            following responsibilities:</p>
-                            <ul>
-                                <li>
-                                    creating and maintaining a website to publicize the actions of the mandate;
-                                </li>
-                                <li>
-                                    creating printed materials, such as pamphlets and booklets;
-                                </li>
-                                <li>
-                                    editing videos;
-                                </li>
-                                <li>
-                                    attending meetings in community associations; among others.
-                                </li>
-                            </ul> 
-                        <p>
-                            The mandate's website featured a content management system (CMS). Site's content could be updated by
-                            multiple users with specific access profiles. The second version 
-                            incorporated SEO techniques. By January 2006, the site had over 7,000 
-                            visits per month; it ranked first on Google for the search term “mandato participativo” 
-                            and had a good overall position on search engines. In December 2005, I stepped away
-                            from the routine activities of the Mandate, remaining in charge only of maintaining
-                            the website.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Web Designer</h3>
-                        <p><span>2002-2003</span> Interativa Internet - Salvador | BA</p>
-                        <p>
-                            I used to develop system interfaces with web-based designs. Visual planning was done
-                            in Photoshop. There, I learned PHP, databases (PostgreSQL, Oracle, and MySQL),
-                            strengthened my JavaScript skills, and gained some knowledge about networks. I also
-                            learned how to separate code into layers. I stayed with the company for almost two
-                            years, and even after leaving, I continued providing services as a freelancer.
-                        </p>
+      <h3>Analytical Thinking</h3>
+      <p>Strong ability to identify patterns, inconsistencies, and opportunities for process improvement.</p>
 
-                    </div>
-                </div>
-                <div class="expertise">
-                    <h2>Expertise</h2>
+      <h3>Organization & Prioritization</h3>
+      <p>Skilled at structuring complex tasks and managing multiple demands with efficiency.</p>
+      
+      <h3>Fast Learning</h3>
+      <p>Capacity to absorb new concepts and tools rapidly, applying them effectively to real projects.</p>
+      
+      <h3>Detail Orientation with Focus Management</h3>
+      <p>Ability to deep dive into problems (hyperfocus) while balancing priorities to deliver results.</p>
+      
+      <h3>Collaboration</h3>
+      <p>Experience working across multidisciplinary teams and regional units, aligning objectives to achieve shared outcomes.</p>
+      
+      <h3>Process Optimization Mindset</h3>
+      <p>Consistently seeks to refine workflows, enhance efficiency, and improve the quality of outputs.</p>
+    </div>
 
-                    <div class="circles">
+  </div>
 
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const vaga = params.get("vaga")?.toLowerCase();
 
-                        <div class="circle" data-prog="90">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress">
+    const tituloEl = document.getElementById("titulo");
+    const resumoEl = document.getElementById("resumo");
+    const competenciasEl = document.getElementById("competencias");
+    const experienciasEl = document.getElementById("experiencias");
 
-                                </circle>
-                            </svg>
-                            <p>Html</p>
-                        </div>
+    const conteudo = {
+      dados: {
+        titulo: `Data Analyst | Engineer`,
+        resumo: `
+        <p>I am a multidisciplinary professional with over 7 years 
+          of experience in analyzing, transforming, and detecting 
+          anomalies in large-scale datasets. My work has primarily 
+          focused on identifying inconsistencies in data provided 
+          by telecommunications companies.<p>
+        <p>As Proficient in Python, 
+          SQL, and Excel, and have practical experience with Power
+          BI and Qlik.</p>
+          <p>I hold an MBA and possess a strong 
+            foundation in statistics, data governance, Big Data 
+            and data visualization.<p>
+                     
+        `,
+        competencias: `
 
-                        <div class="circle" data-prog="80">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress">
+          <ul>
+            <li>Advanced Excel (Pivot Tables, VLOOKUP/XLOOKUP, Power Query, Macros, VB, Dashboards)</li>
+            <li>Python (Pandas, NumPy, Matplotlib, Seaborn, Sqlalchemy)</li>
+            <li>Intermediate SQL (data querying, creating events, advanced data manipulation in relational databases)</li>
+            <li>Power BI Fundamentals (data modeling and interactive dashboards, DAX, M Language)</li>
+            <li>Qlik Sense Fundamentals (data exploration and visualization)</li>
+            <li>Applied Statistics (hypothesis testing, descriptive and inferential analysis)</li>
+            <li>Data Governance & Quality Fundamentals</li>
+            <li>Web Scraping (Selenium, Scrapy, beatifulSoap, HTML, CSS, JavaSccript)</li>
+            <li>Big Data Fundamentals (understanding of architectures and tools)</b>
+          </ul>
 
-                                </circle>
-                            </svg>
-                            <p>CSS</p>
-                        </div>
+        `,
+        experiencias:
+      `
+        <h3>Telecommunications Tax Audit</h3>
+<span>2011-2022 | Anatel SP/GO</span>
+<p>Led in-depth analyses of accounting data from telecommunications 
+  providers using advanced Excel features (pivot tables, VLOOKUP,
+  XLOOKUP), identifying underreported tax declarations and guiding
+  companies toward compliance with FUST and FUNTTEL contributions.
+  One of my reports was adopted as a reference model.</p>
 
-                        <div class="circle" data-prog="35">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress">
+<h3>Assessment of Broadband Quality</h3>
+<span>2019</span>
+<p>Processed and interpreted large datasets on performance measurements 
+  (such as speed, latency, jitter), uncovering patterns and deviations
+  that informed regulatory actions and led to the enhancement of
+  broadband quality assessment processes.</p>
 
-                                </circle>
-                            </svg>
-                            <p>JavaScript</p>
-                        </div>
+<h3>Auditing Migration of Mobile Customer's Base</h3>
+<span>2020</span>
+<p>Analyzed user notifications and billing records using statistics,
+  Excel, and Python-driven cross-database comparisons, in collaboration
+  with four other regional units. This work compelled the operator to
+  implement corrective measures to safeguard users' rights during the
+  migration process.</p>
 
+<h3>Verification of Prepaid Mobile Users Registration</h3>
+<span>2021</span>
+<p>Executed validations and cross-checks on registration data using
+  Python, complemented by dynamic visual reporting in Excel, ensuring
+  the integrity of prepaid mobile line registration, reinforcing
+  activation security, and strengthening fraud prevention mechanisms.</p>
 
-                        <div class="circle" data-prog="60">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress"></circle>
-                            </svg>
-                            <p>Photoshop</p>
-                        </div>
+<h3>Design of Methodologies for Verifying Reported Telecommunications Accesses</h3>
+<span>2022</span>
+<p>Collaborated in a working group to establish regulatory inspection
+  procedures for validating the number of telecommunications accesses
+  reported by providers, applying statistical methods to detect
+  inconsistencies and improve data reliability.</p>
 
+<h3>Development of a Regulatory Inspection Tool for E-commerce Platforms</h3>
+<span>2023</span>
+<p>Designed and implemented a proof of concept (POC) for a web scraping
+  tool to identify products prohibited for sale in Brazil, strengthening
+  regulatory enforcement and combating illegal marketplaces. This initiative
+  supported measures leading to the seizure of over BRL 50 million in irregular
+  products.</p>
 
-                        <div class="circle" data-prog="75">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress"></circle>
-                            </svg>
-                            <p>Illustrator</p>
-                        </div>
+<p>Thanks to the significant impact of this regulatory inspection tool,
+  I was selected to serve as IT Coordinator at Anatel's Salvador office.</p>
+`,
 
-                        <div class="circle" data-prog="75">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress">
+      },
+      dev: {
+        titulo: `Software Engineer`,
+        resumo: `
+        <p> I am a multidisciplinary professional with over 
+          10 years of experience in web projects. </p>
+        <p> I focus on creating solutions that combine
+           stunning user interfaces (UI), usability, user experience 
+           (UX), and accessibility. I seek to develop products that 
+           are not only functional but also intuitive and inclusive,
+           meeting the needs of diverse users.</p>
+        `,
+        competencias: `
+          <ul>
+            <li>HTML5, CSS3, JavaScript, Responsive front-end development</li>
+            <li>React, Node.js, Electron.js</li>
+            <li>Version Control with Git/GitHub</li>
+            <li>UX/UI Principles (usability and user-centered design)</li>
+            <li>SQL & NoSQL (database modeling and integration)
+              <ul>
+                <li>PostgeSql</li>
+                <li>MySql</li>
+                <li>MongoDB</li>
+              </ul>
+            </li>
+            <li>PHP</li>
+            <li>Automation / WebScraping
+              <ul>
+                <li>PyWinAuto, PyAutGUI, Selenium</li>
+                <li>Scapy python</li>
+              </ul>
+            </li>
+            <li>Design Tools
+              <ul>
+                <li>FLowchars (Miro, Figma...) </li>
+                <li>Adobe Suite (Photoshop, Illustrator)</li>
+                <li>Other design tools (inkscape, Canva, Corel, Affinity Designer...)</li>
+              </ul>
+            </li>
+          </ul>
+        `,
+        experiencias: 
+        `
+        <h3>Development of a Regulatory Inspection Tool for E-commerce Platforms</h3>
+<span>2023 | Anatel | GO</span>
+<p>Designed and implemented a proof of concept (POC) for a web scraping
+  tool to identify products prohibited for sale in Brazil, strengthening
+  regulatory enforcement and combating illegal marketplaces. This initiative
+  supported measures leading to the seizure of over BRL 50 million in irregular
+  products.</p>
 
-                                </circle>
-                            </svg>
-                            <p>inkscape</p>
-                        </div>
+<p>Thanks to the significant impact of this regulatory inspection tool,
+  I was selected to serve as IT Coordinator at Anatel's Salvador office.</p>
 
+ <h3>Interface Engineer</h3>
+<span> 2007 | Power.com – Rio de Janeiro, Brazil</span>
+<p>Contributed to the development of Power.com, a social network hub that 
+  integrated platforms such as Orkut, Flogão, and YouTube, providing 
+  advanced features ahead of their time. Collaborated on interface design
+   and implementation to enhance user experience.</p>
 
-                        <div class="circle" data-prog="85">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress">
+<h3>Web Designer</h3>
+<span> 2006 | NetDom – Salvador, Brazil</span>
+<p>Redesigned and developed a lighter, more efficient portal for publishing 
+  local government official documents, improving accessibility and performance.
+  Participated in the project that resulted in the creation of the National
+  Official Press portal of Cape Verde.
+</p>
 
-                                </circle>
-                            </svg>
-                            <p>Word</p>
-                        </div>
+<h3>Web Designer</h3>
+<span>2002 – 2003 | Interativa Internet – Salvador, Brazil</span>
+<p>Developed system interfaces with web-based designs using Photoshop for 
+  visual planning. Gained practical experience with PHP, databases 
+  (PostgreSQL, Oracle, MySQL), and JavaScript, while learning structured 
+  code separation and acquiring foundational networking knowledge.</p>    
+      `
+      }
+    };
 
-                        <div class="circle" data-prog="70">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress">
-
-                                </circle>
-                            </svg>
-                            <p>Excel</p>
-                        </div>
-
-                        <div class="circle" data-prog="90">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress">
-
-                                </circle>
-                            </svg>
-                            <p>PowerPoint</p>
-                        </div>
-
-
-                        <div class="circle" data-prog="35">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress">
-
-                                </circle>
-                            </svg>
-                            <p>Power BI</p>
-                        </div>
-
-                        <div class="circle" data-prog="60">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress">
-
-                                </circle>
-                            </svg>
-                            <p>PHP</p>
-                        </div>
-
-                        <div class="circle" data-prog="50">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress">
-
-                                </circle>
-                            </svg>
-                            <p>Python</p>
-                        </div>
-
-
-                        <div class="circle" data-prog="50">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress">
-
-                                </circle>
-                            </svg>
-                            <p>GIT</p>
-                        </div>
-
-                        <div class="circle" data-prog="75">
-                            <svg width="150" height="150">
-                                <circle r="50" cx="75" cy="75" class="progress">
-
-                                </circle>
-                            </svg>
-                            <p>SQL</p>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <script src="main.js"></script>
+    const tipo = vaga in conteudo ? vaga : 'dev';
+    tituloEl.innerHTML = conteudo[tipo].titulo;
+    resumoEl.innerHTML = conteudo[tipo].resumo;
+    competenciasEl.innerHTML = conteudo[tipo].competencias;
+    experienciasEl.innerHTML = conteudo[tipo].experiencias;
+  
+  </script>
 </body>
 </html>
