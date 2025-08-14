@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume - Bruno Araújo Soares</title>
+  <style>
+    body {
+      font-family: 'Trebuchet MS', Arial, sans-serif;
+      font-size: 1rem;
+      margin: 0;
+      padding: 1rem;
+      background-color: #000000;
+      color: #333;
+    }
+    .container {  
+      max-width: 800px;
+      margin: auto;
+      background-color: #deded4;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .profile {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #092b72;
+    }
+    h1 {
+      text-transform: uppercase;
+      padding: 10px;
+      color: #092b72;
+    }
+    h2 {
+      text-transform: uppercase;
+      padding: 8px 15px;
+      background-color: #092b72;
+      color: rgb(119, 211, 250);
+    }
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      color: rgb(32, 142, 189);
+    }
+    #experiencias span {
+      background-color: rgb(32, 142, 189);
+      color: #deded4;
+      padding: 6px;
+      font-size: 0.7rem;
+    }
+    .section {
+      margin-bottom: 1.5rem;
+    }
+    #resumo, #experiencias, #competencias, #competencias-soft{
+      margin: 10px 40px 40px 40px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 1rem; }
+      .profile img { width: 100px; height: 100px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile"> 
+      <img src="eu-linkedin.jpg" alt="Bruno Araújo">
+      <h1>Bruno Araújo Soares</h1>
+      <p><span id="email-container"></span> | Current location: Bahia/Brazil | <span id="phone-container"></span><br>
+        Linkedin: <a href="https://www.linkedin.com/in/bruno-araujo-soares/" target="_blank">linkedin.com/in/bruno-araujo-soares/</a></p>
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const emailHash = "6272756e6f617261756a6f736f6172657340676d61696c2e636f6d";
+        const whatsappHash = "37312039393932342033303130";
+        function hexToText(hex) {
+            return hex.match(/.{1,2}/g).map(byte => String.fromCharCode(parseInt(byte, 16))).join('');
+        }
+        document.getElementById("email-container").innerHTML = hexToText(emailHash);
+        document.getElementById("phone-container").innerHTML = `+55 ${hexToText(whatsappHash)}`;
+    });
+</script>
+    
+    <h2>Home Based Data Entry Typist</h2>
+    <div class="section" id="resumo">
+      <p>Professional with over 10 years of experience in handling, organizing, and analyzing large volumes of data. Proven ability to work with accuracy and speed, ensuring error-free documentation and on-time delivery.</p>
+      <p>Advanced user of Microsoft Office (Word, Excel) and other productivity tools. Skilled in remote work environments, with excellent written communication, attention to detail, and ability to maintain structured records.</p>
+      <p>Recognized for organizational excellence, fast learning, and delivering high-quality work with minimal supervision.</p>
+    </div>
+
+    <h2>Education</h2>
+    <div class="section">
+      <ul>
+        <li><strong>Bachelor's degree in Software Engineering</strong> – Anhanguera Educacional (Jul 2023 – atual)</li>
+        <li><strong>MBA in Data Analysis </strong> – Descomplica (Nov 2021 – Mai 2022)</li>
+        <li><strong>Bachelor's degree in Advertising</strong> – Faculdade Metropolitana - POLIFUCS (1999 – 2003)</li>
+      </ul>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="section" id="experiencias">
+      <h3>Data Verification & Documentation</h3>
+      <span>2011-2023 | Anatel</span>
+      <p>Gathered, organized, and processed large datasets for audits and regulatory reports. Applied advanced Excel functions and document formatting standards, ensuring high accuracy and compliance.</p>
+
+      <h3>Proofreading & Quality Control</h3>
+      <span>2019-2023 | Anatel</span>
+      <p>Reviewed official documents and technical reports, identifying and correcting inconsistencies before submission. Ensured data integrity through cross-referencing and validation processes.</p>
+
+      <h3>Remote Collaboration & Reporting</h3>
+      <span>2020-2023 | Anatel</span>
+      <p>Worked with multidisciplinary teams across different regions to prepare detailed documentation for internal and external stakeholders, delivering within strict deadlines.</p>
+    </div>
+
+    <h2>Technical Skills</h2>
+    <div class="section" id="competencias">
+      <ul>
+        <li>Advanced Microsoft Word & Excel (Pivot Tables, VLOOKUP/XLOOKUP, formatting, macros)</li>
+        <li>Data organization, transcription, and documentation</li>
+        <li>Proofreading and error correction</li>
+        <li>Remote work tools (Google Workspace, Microsoft Teams, Zoom)</li>
+        <li>Basic to intermediate SQL for data validation</li>
+        <li>Fast typing speed and attention to detail</li>
+      </ul>
+    </div>
+
+    <h2>Soft Skills</h2>
+    <div class="section" id="competencias-soft">
+      <h3>Attention to Detail</h3>
+      <p>Careful review and correction of documents before submission.</p>
+      <h3>Organization</h3>
+      <p>Structured task management ensuring timely delivery of assignments.</p>
+      <h3>Adaptability</h3>
+      <p>Ability to quickly adjust to new processes, tools, and work requirements.</p>
+      <h3>Self-Motivation</h3>
+      <p>Capable of working effectively with minimal supervision.</p>
+    </div>
+  </div>
+</body>
+</html>
