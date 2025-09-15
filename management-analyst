@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume - Bruno Ara&uacute;jo Soares</title>
+  <style>
+    body {
+      font-family: 'Trebuchet MS', Arial, sans-serif;
+      font-size: 1rem;
+      margin: 0;
+      padding: 1rem;
+      background-color: #000000;
+      color: #333;
+    }
+    .container {  
+      max-width: 800px;
+      margin: auto;
+      background-color: #deded4;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .profile {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #092b72;
+    }
+    h1 {
+      text-transform: uppercase;
+      padding: 10px;
+      color: #092b72;
+    }
+    h2 {
+      text-transform: uppercase;
+      padding: 8px 15px;
+      background-color: #092b72;
+      color: rgb(119, 211, 250);
+    }
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      color: rgb(32, 142, 189);
+    }
+    #experiencias span {
+      background-color: rgb(32, 142, 189);
+      color: #deded4;
+      padding: 6px;
+      font-size: 0.7rem;
+    }
+    .section {
+      margin-bottom: 1.5rem;
+    }
+    #resumo, #experiencias, #competencias, #competencias-soft{
+      margin: 10px 40px 40px 40px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 1rem; }
+      .profile img { width: 100px; height: 100px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile"> 
+      <img src="eu-linkedin.jpg" alt="Bruno Araújo">
+      <h1>Bruno Araújo Soares</h1>
+      <p><span id="email-container"></span> | Current location: Salvador, Brazil (Remote Worldwide) | <span id="phone-container"></span><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/bruno-araujo-soares/" target="_blank">linkedin.com/in/bruno-araujo-soares/</a></p>
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const emailHash = "6272756e6f617261756a6f736f6172657340676d61696c2e636f6d";
+        const whatsappHash = "37312039393932342033303130";
+        function hexToText(hex) {
+            return hex.match(/.{1,2}/g).map(byte => String.fromCharCode(parseInt(byte, 16))).join('');
+        }
+        document.getElementById("email-container").innerHTML = hexToText(emailHash);
+        document.getElementById("phone-container").innerHTML = `+55 ${hexToText(whatsappHash)}`;
+    });
+</script>
+    
+    <h2>Professional Summary: Tuition & Revenue Management Analyst</h2>
+    <div class="section" id="resumo">
+      <p>Multidisciplinary professional with 10+ years of experience in web projects, data analysis, and regulatory operations. 
+        Skilled in using data to drive decision-making, managing inventories, and improving processes.</p>
+      <p>Strong background in user experience (UX), accessibility, and project coordination. Adept at analyzing large datasets,
+        leading cross-functional teams, and delivering results in complex and regulated environments.</p>
+    </div>
+
+    <h2>Core Skills</h2>
+    <div class="section" id="competencias">
+      <ul>
+        <li>Data Analysis & Reporting (Excel, Python, SQL, Big Data)</li>
+        <li>Inventory & Campaign Management</li>
+        <li>Regulatory & Compliance Operations</li>
+        <li>UX & Accessibility</li>
+        <li>Cross-Department Collaboration & Stakeholder Reporting</li>
+      </ul>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="section" id="experiencias">
+      <h3>Internal Information Coordinator</h3>
+      <span>2023 – 2025 | National Telecommunications Agency (ANATEL), Bahia / Brazil</span>
+      <p>Coordinated a team of 5 people:
+      <ul>
+        <li>managing documentation )handling(digital and phisical) ;</li>
+        <li>event scheduling in four areas: Trainning Room, Meeting Room, Auditorium and Collaborative space.</li>
+        <li>equipment lending;</li>
+        <li>and IT service requests;</li>
+        <li>Monitoring inventory;</li>
+      </ul>
+      
+      <h3>Regulatory Technician / Internal Information Coordinator</h3>
+      <span>2007 – Present | National Telecommunications Agency (ANATEL), Brazil</span>
+      <p>Conducted inspections on illegal broadcasting stations and internet providers. Performed audits on broadband in schools,
+       mobile registration databases, and internet quality. </p>
+      <p>Contributed to Accessibility Ranking inspections for telecom services.</p>
+      <p>Led Big Data projects using Python to analyze datasets with tens of millions of records.</p>
+
+      <h3>Interface Engineer</h3>
+      <span>2006 – 2007 | Power.com, Rio de Janeiro</span>
+      <p>Designed and developed interfaces for PowerScrap, a social network hub integrating Orkut, Flogão, and YouTube.</p>
+
+      <h3>Advisory Team Member</h3>
+      <span>2005 | City Council of Lauro de Freitas, Bahia</span>
+      <p>Created and maintained a CMS-based website, produced printed materials and videos, and engaged with community associations.</p>
+
+      <h3>Web Designer</h3>
+      <span>2002 – 2003 | Interativa Internet, Bahia</span>
+      <p>Developed system interfaces, learned PHP and databases (PostgreSQL, Oracle, MySQL), and applied code separation best practices.</p>
+    </div>
+
+    <h2>Education</h2>
+    <div class="section">
+      <ul>
+        <li><strong>Bachelor’s Degree in Software Engineering</strong> – Anhanguera University (2023 – 2027)</li>
+        <li><strong>Postgraduate Degree in Data Analysis</strong> – Descomplica (2021 – 2022)</li>
+        <li><strong>Specialization in Video Production and Animation</strong> – DRC Consulting (2004)</li>
+        <li><strong>Bachelor’s Degree in Social Communication (Advertising)</strong> – Polifucs (1999 – 2023)</li>
+      </ul>
+    </div>
+
+    <h2>Languages & Tools</h2>
+    <div class="section">
+      <ul>
+        <li>Portuguese: Native | English: Advanced</li>
+        <li>Excel (Advanced), Python (pandas)</li>
+        <li>UX & Accessibility | Agile Tools (Trello, GitHub)</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
